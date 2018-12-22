@@ -1,0 +1,49 @@
+{
+	"name": "Gana",
+	"version": "1.0",
+	"description": "Google Chrome extension for songs.",
+	"manifest_version": 2,
+	"icons": {
+		"128": "icon_128.png"
+	},
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"tabs",
+		"notifications",
+		"http://*/",
+		"https://*/"
+	],
+	
+	"background": {
+		"scripts": [
+			"background.js"
+		],
+		"persistent": false
+	},
+	"commands": {
+		"next_key": {
+			"suggested_key": {
+				"default": "MediaNextTrack",
+				"mac": "MediaNextTrack"
+			},
+			"description": "for next track"
+		},
+		"prev_key": {
+			"suggested_key": {
+				"default": "MediaPrevTrack",
+				"mac": "MediaPrevTrack"
+			},
+			"description": "for previous track"
+		},
+		"playPause_key": {
+			"suggested_key": {
+				"default": "MediaPlayPause",
+				"mac": "MediaPlayPause"
+			},
+			"description": "to play pause"
+		}
+	}
+}
